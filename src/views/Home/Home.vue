@@ -1,7 +1,9 @@
 <template>
-  <a-button type="primary" @click="add"> add </a-button>
-  <a-button type="Reset" @click="Reset"> Reset </a-button>
-  {{ count }}
+  <div class="space">
+    <a-button type="primary" @click="add"> add </a-button>
+    <a-button type="Reset" @click="Reset"> Reset </a-button>
+    <div class="Num">{{ count }}</div>
+  </div>
 </template>
 
 <script>
@@ -24,17 +26,13 @@ const Reset = () => {
 </script>
 
 <style lang="less">
-.box {
-  width: 100%;
-  height: 100%;
-  border: 1px solid #42b983;
-
-  .h1 {
-    color: red;
-  }
-
-  .h2 {
-    color: blue;
+.space {
+  display: flex;
+  margin: 40px;
+  .Num {
+    font-size: 16px;
+    color: #000;
+    margin-left: 20px;
   }
 }
 </style>
